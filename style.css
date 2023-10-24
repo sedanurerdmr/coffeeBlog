@@ -1,0 +1,445 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=IBM+Plex+Sans:wght@700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;500;700;800&family=Roboto+Slab:wght@200&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Herr+Von+Muellerhoff&family=IBM+Plex+Sans:wght@700&family=PT+Serif:wght@400;700&family=Roboto+Slab:wght@200&family=Roboto:wght@100&display=swap');
+
+
+/*    -----RESERTLEME KODLARI------   */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a,
+a:link,  /*kullanici linke tiklamadan once */
+a:visited{   /* kullanici linke tikladiktan sonra */
+    text-decoration: none;
+    outline: none;  /*tiklanildiginda cizgi cikmasin diye*/
+    border: none;
+}
+
+ul,
+li{
+    list-style: none;  /* listenin basinda olusan noktalari yok etmek icin*/
+    margin: 0;
+    padding: 0;
+
+}
+
+section,
+span,
+p{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: 0;
+}
+
+/*     ----RESERTLEME KODLARI BITTI-----   */
+
+.container{
+   max-width: 1170px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.header{
+    background-image: url(ana.jpg) ;
+    background-position: center;
+    background-size: cover;  /*ekrani kaplamasi icin*/
+    background-attachment: fixed;  /*sabit kalmasini istiyoruz*/
+    height: 100vh;  /*hangi cihazdan girersen gir ekran yuksekligini kapsar*/
+    padding: 40px 0;
+}
+
+.header-navbar{
+    display: flex;  /*yan yana geldiler*/
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.header-logo{
+    font-size: 16px;
+    align-items: center;
+    letter-spacing: 2px; /* harfler arası bosluk olusturduk*/
+    border-bottom: 5px solid #000;
+    border-radius: 25px;
+    padding-bottom: 5px;
+}
+
+ul{
+    display: flex;
+}
+
+li{
+    margin-left: 27px;
+}
+
+a{
+    color: black;
+    font-weight:bold;
+    font-size: 15px;
+}
+
+.header-text{
+    position: absolute;  /*top left bottom right degerleri kullanacagimiz için*/
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);  /*sayfada istedigimiz gibi hizalama yapabilmek icin */
+    display: flex;
+    align-items: center; /*dikeyde hizaliyor*/
+    justify-content: center; /*yatayda hizaliıyor*/
+    flex-direction: column;  /*yan yana degilde ikiside ayni kolonda hizalansin diye*/
+
+}
+
+h1{
+    font-size: 8.5rem;
+    font-weight: 100;
+    line-height: 0.4;  /*satir boslugu icin*/
+    letter-spacing: 2px; /*harfler arasi bosluk*/
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color:#391a04 ;
+}
+
+.first-letter{
+    font-size: 10.3rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color:#391a04 ;
+}
+
+h3{
+    margin-bottom: 15px;
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+.btn-coffee{
+    display: block; /*tum satiri kapliyor*/
+    background-color: #391a04;
+    color: #fff;
+    padding: 10px 15px;
+    /* border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    border-top-right-radius:35px ;
+    border-bottom-left-radius: 35px; */
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden; /*tasmayi engeller*/
+}
+
+.btn-coffee::after{
+    content: "BUY";  /*mutlaka yazmalisin yoksa gorunmez*/
+    position: absolute; /*bunu verebilmek için ana kapsayiciya relative vermeliyiz*/
+    top: 100%;
+    left: 0;
+    background-color: #98460b;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.btn-coffee:hover::after{
+    top: 0;
+
+}
+
+/*ABOUT---------------------------------------------------------*/
+
+.about{
+    margin-bottom: 150px;
+}
+
+.about-tittle{
+    margin: 60px 0; /*yukarı aşağı sağ sol*/
+
+}
+
+.about-tittle h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #98460b;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+
+
+.about-tittle h2::after{
+    content:"" ;  /*content yazmayi unutma after calismaz. Uzerine gelindiginde gelecek yazı */
+    width: 30px;
+    height: 3px;
+    background-color: #98460b;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.about-content{
+    display: flex;
+    align-items: center;  /*dikeyde ortalama*/
+    justify-content: space-around;
+    flex-wrap: wrap; /*asagi satira inmesi icin*/
+}
+.about-img{
+    width: 30%;
+}
+
+.about-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /*en boy oranini korur*/
+}
+
+.about-text{
+    width: 40%;
+}
+
+h4{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    color:#391a04 ;
+    letter-spacing: 0.2rem; /*harfler arasi bosluk*/
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 15px;
+    text-align: center;
+    color: #2c2727;
+}
+
+/* PORTFOLYO----------------------------------------------------- */
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;  /*tasan gorselleri asagi satira getirecek*/
+}
+
+.portfolio-item{
+    width: 25%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-item img{
+    /* gorsellerin en boy oranini vermek icin */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+
+.overLay{
+    width: 100%;
+    height: 100%;
+    background-color: #5b2a02;
+    position: absolute; /*ana kapsayiciya relative vermelisin*/
+    top: 100%;
+    left: 0;
+    opacity: 0.8;
+    color: #fff;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.portfolio-item:hover .overLay{
+    top: 0;
+}
+
+.portfolio-item:hover img{
+    /* uzerine gelindiginde img uzerinde degisim yapabilmek icin */
+    transform: scale(1.1);   /*scale sayesinde x ve y duzleminde buyutup kucultebiliyoruz*/
+}
+
+/* CONTACT-------------------------------------------------------------------------------- */
+
+.contact{
+    padding: 10px 0;
+
+}
+
+.contact h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #98460b;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.contact h2::after{
+    content:"" ;  /*content yazmayi unutma after calismaz. Uzerine gelindiginde gelecek yazı */
+    width: 30px;
+    height: 3px;
+    background-color: #98460b;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+}
+
+.contact-content{
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    flex-basis: 33%;  /*belli bir alani kaplasin diye*/
+    margin-bottom: 100px;
+    flex-direction: column; /*kolon halinde durmalari icin*/
+}
+
+.contact-item i{
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #5b2a02;
+}
+
+.contact-item p{
+    font-size: 15px;
+    text-align: center;
+    color: #2c2727;
+}
+
+/* FOOTER------------------------------------------------------------------------- */
+
+.page-tittle h2{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    color: #98460b;
+    font-size: 30px;
+    font-weight: 600;
+    padding: 56px 0;
+}
+
+.footer h2::after{
+    content:"" ;  /*content yazmayi unutma after calismaz. Uzerine gelindiginde gelecek yazı */
+    width: 30px;
+    height: 3px;
+    background-color: #98460b;
+    margin: 0 auto;
+    display: block;
+    margin-top: 10px;
+    
+}
+
+.footer{
+    background-color: #000;
+}
+
+.content-item{
+    color: #fff;
+    text-align: center;
+    flex-basis: 55%;
+    line-height: 2; /*satir boslugu*/
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-social i{
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 25px;
+    padding: 0 40px;
+
+}
+
+.footer-social:first-child{
+    margin-left: 70px;
+}
+
+#menu-icon{
+    font-size: 25px;
+    display: none;  /*belli bir ekran boyutunda gorunmesini istedigim icin su an none degerini veriyoruz*/
+}
+
+/* MENU--------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width:800px){  /*media query ile sinirlandirma getirmis olduk*/
+    .header-menu ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute; /*top left degerlerini kuullanabilmek icin*/
+        top: 100px;
+        left: 0px;
+        background-color: #2b1402da;
+        width: 100%; 
+        overflow: hidden; /*tasmalari engeller*/
+        transition: max-height 0.5s;
+    }
+    .header-menu ul li{
+        margin-right: 50px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .header-menu ul li a{
+        color: #fff;
+    }
+    .header-menu #menu-icon{
+        display: block;
+        cursor: pointer;  /*fare ile ustune gelindiginde el isareti cikar*/
+    }
+}
+
+/* ABOUT----------------------------------------------------------------------------------------------------- */
+/* EKRANIN BOYUTUNA GORE BOZULMAYI ENGELLEME */
+@media only screen and (max-width:990px){
+    .about-img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .about-text{
+        width: 100%;
+    }
+}
+
+/* PORTFOLIP--------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width:990px){ /*her satira 2 fotograf duser*/
+    .portfolio .portfolio-item{
+        flex-basis: 50%;
+    }
+}
+@media only screen and (max-width:580px){  /*tum satiri kaplar*/
+    .portfolio .portfolio-item{
+        flex-basis: 100%;
+    }
+}
+
+/* CONTACT-------------------------------------------------------------------------------------------------------- */
+@media only screen and (max-width:800px){
+    .contact-content{
+        flex-direction: column;
+    }
+    .content-item{
+        margin-top: 30px;
+    }
+    .contact-item p{
+        width: 100%;
+        text-align: center;
+    }
+}
